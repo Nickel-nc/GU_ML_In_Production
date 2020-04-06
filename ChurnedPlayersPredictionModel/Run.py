@@ -65,9 +65,6 @@ while True:
         try:
             with open(MODEL_PATH, 'rb') as input_file:
                 model = pickle.load(input_file)            # Load model
-            # with open(X_TEST_PATH, 'rb') as input_file:
-            #     X_test_PI = pickle.load(input_file)  # Load stored test data
-
             with open(FEATURES_FILE, 'rb') as input_file:
                 FEATURES = pickle.load(input_file)
             get_predict(model, TEST_DATA_FILEPATH, FEATURES)
@@ -86,4 +83,3 @@ while True:
         except FileNotFoundError as e:
             logger2.error(e)
             print('Readme not found')
-
