@@ -1,0 +1,158 @@
+
+2020-04-05 23:25:32,299 INFO #################### Session started ####################
+
+Run.py[LINE:76] INFO ____OPTION 3_____ Start Make predictions 
+Run.py[LINE:90] ERROR [Errno 2] No such file or directory: 'output/X_test.sav' 
+
+2020-04-05 23:25:36,763 INFO #################### Session closed ####################
+
+
+2020-04-05 23:25:51,692 INFO #################### Session started ####################
+
+Run.py[LINE:34] INFO ____OPTION 1_____ Start build dataset 
+BuildDataset.py[LINE:30] INFO Run time (reading csv files): 0:02:23.596542 
+BuildDataset.py[LINE:37] INFO Creating train dataset 
+BuildDataset.py[LINE:57] INFO Processing with features: ['pay_amt', 'trans_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:03:18.657348 
+BuildDataset.py[LINE:57] INFO Processing with features: ['reports_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:06:15.847844 
+BuildDataset.py[LINE:57] INFO Processing with features: ['sess_with_abusers_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:16:21.604604 
+BuildDataset.py[LINE:57] INFO Processing with features: ['disconnect_amt', 'session_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:26:45.456600 
+BuildDataset.py[LINE:57] INFO Processing with features: ['avg_min_ping'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:33:57.636874 
+BuildDataset.py[LINE:57] INFO Processing with features: ['win_rate', 'leavings_rate', 'kd', 'session_player'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:39:04.967660 
+BuildDataset.py[LINE:57] INFO Processing with features: ['silver_spent', 'gold_spent'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:44:19.426859 
+BuildDataset.py[LINE:78] INFO Dataset is successfully built and saved to dataset/, run time "build_dataset_raw": 0:44:42.025168 
+BuildDataset.py[LINE:30] INFO Run time (reading csv files): 0:00:05.506314 
+BuildDataset.py[LINE:37] INFO Creating test dataset 
+BuildDataset.py[LINE:57] INFO Processing with features: ['pay_amt', 'trans_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:00:07.546119 
+BuildDataset.py[LINE:57] INFO Processing with features: ['reports_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:00:15.117105 
+BuildDataset.py[LINE:57] INFO Processing with features: ['sess_with_abusers_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:00:38.471875 
+BuildDataset.py[LINE:57] INFO Processing with features: ['disconnect_amt', 'session_amt'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:01:05.448538 
+BuildDataset.py[LINE:57] INFO Processing with features: ['avg_min_ping'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:01:32.868510 
+BuildDataset.py[LINE:57] INFO Processing with features: ['win_rate', 'leavings_rate', 'kd', 'session_player'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:01:59.208601 
+BuildDataset.py[LINE:57] INFO Processing with features: ['silver_spent', 'gold_spent'] 
+BuildDataset.py[LINE:69] INFO Run time (calculating features): 0:02:26.624315 
+BuildDataset.py[LINE:78] INFO Dataset is successfully built and saved to dataset/, run time "build_dataset_raw": 0:02:28.692973 
+BuildDataset.py[LINE:89] INFO Dealing with missing values, outliers, categorical features 
+BuildDataset.py[LINE:111] INFO Dataset is successfully prepared and saved to dataset/, run time (dealing with bad values): 0:00:24.717490 
+BuildDataset.py[LINE:89] INFO Dealing with missing values, outliers, categorical features 
+BuildDataset.py[LINE:111] INFO Dataset is successfully prepared and saved to dataset/, run time (dealing with bad values): 0:00:24.819068 
+Run.py[LINE:62] INFO ____OPTION 2_____ Start Train model 
+ProcessData.py[LINE:10] INFO Splitting data 
+ProcessData.py[LINE:29] INFO Balancing minor class 
+FitModel.py[LINE:39] INFO Selected 38 features: 
+FitModel.py[LINE:45] INFO Features successfully saved to output/important_features.sav 
+FitModel.py[LINE:64] INFO Trained model parameters:
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=0.5, gamma=0,
+              learning_rate=0.1, max_delta_step=0, max_depth=3,
+              min_child_weight=3, missing=10000000000.0, n_estimators=100,
+              n_jobs=1, nthread=5, objective='binary:logistic', random_state=0,
+              reg_alpha=0.0, reg_lambda=0.0, scale_pos_weight=1, seed=42,
+              silent=None, subsample=1.0, verbosity=1) 
+EvaluateModel.py[LINE:6] INFO Evaluating model parameters 
+EvaluateModel.py[LINE:18] INFO Precision: 0.2945088676671214
+Recall: 0.41634522661523626
+F1: 0.3449860167798642
+Log Loss: 0.1341416895568461
+ROC AUC: 0.8976342013978357 
+FitModel.py[LINE:72] INFO Model successfully saved to output/model.sav 
+Run.py[LINE:76] INFO ____OPTION 3_____ Start Make predictions 
+PredictData.py[LINE:6] INFO Start prediction... 
+PredictData.py[LINE:12] INFO Prediction succesfully saved to output/YN_prediction.csv 
+
+2020-04-06 00:52:57,048 INFO #################### Session closed ####################
+
+
+2020-04-06 12:13:27,409 INFO #################### Session started ####################
+
+Run.py[LINE:63] INFO ____OPTION 2_____ Start Train model 
+ProcessData.py[LINE:10] INFO Splitting data 
+ProcessData.py[LINE:29] INFO Balancing minor class 
+EvaluateModel.py[LINE:32] INFO CV Parameters result:
+{'subsample': 1, 'seed': 42, 'reg_lambda': 0, 'reg_alpha': 0, 'n_estimators': 200, 'missing': 10000000000.0, 'min_child_weight': 7, 'max_depth': 5, 'learning_rate': 0.5, 'colsample_bytree': 1} 
+EvaluateModel.py[LINE:33] INFO CV Parameters successfully saved to output/xgb_best_params.sav 
+FitModel.py[LINE:69] INFO Load Important Features from backup: 38 features 
+FitModel.py[LINE:78] INFO Trained model parameters:
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=1, gamma=0,
+              learning_rate=0.5, max_delta_step=0, max_depth=5,
+              min_child_weight=7, missing=10000000000.0, n_estimators=200,
+              n_jobs=1, nthread=None, objective='binary:logistic',
+              random_state=0, reg_alpha=0, reg_lambda=0, scale_pos_weight=1,
+              seed=42, silent=None, subsample=1, verbosity=1) 
+EvaluateModel.py[LINE:9] INFO Evaluating model parameters 
+EvaluateModel.py[LINE:21] INFO Precision: 0.40142638818135506
+Recall: 0.18997107039537126
+F1: 0.2578955981017837
+Log Loss: 0.0962604416682996
+ROC AUC: 0.9041851244260118 
+FitModel.py[LINE:86] INFO Model successfully saved to output/model.sav 
+
+2020-04-06 13:10:28,611 INFO #################### Session closed ####################
+
+
+2020-04-06 13:16:12,875 INFO #################### Session started ####################
+
+Run.py[LINE:54] INFO ____OPTION 2_____ Start Train model 
+ProcessData.py[LINE:10] INFO Splitting data 
+ProcessData.py[LINE:29] INFO Balancing minor class 
+FitModel.py[LINE:52] INFO Load xgb.parameters from output/xgb_best_params.sav 
+FitModel.py[LINE:69] INFO Load Important Features from backup: 38 features 
+FitModel.py[LINE:78] INFO Trained model parameters:
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=1, gamma=0,
+              learning_rate=0.5, max_delta_step=0, max_depth=5,
+              min_child_weight=7, missing=10000000000.0, n_estimators=200,
+              n_jobs=1, nthread=None, objective='binary:logistic',
+              random_state=0, reg_alpha=0, reg_lambda=0, scale_pos_weight=1,
+              seed=42, silent=None, subsample=1, verbosity=1) 
+EvaluateModel.py[LINE:9] INFO Evaluating model parameters 
+EvaluateModel.py[LINE:21] INFO Precision: 0.40142638818135506
+Recall: 0.18997107039537126
+F1: 0.2578955981017837
+Log Loss: 0.0962604416682996
+ROC AUC: 0.9041851244260118 
+FitModel.py[LINE:86] INFO Model successfully saved to output/model.sav 
+
+2020-04-06 13:30:44,946 INFO #################### Session closed ####################
+
+
+2020-04-06 13:42:36,870 INFO #################### Session started ####################
+
+Run.py[LINE:54] INFO ____OPTION 2_____ Start Train model 
+ProcessData.py[LINE:10] INFO Splitting data 
+ProcessData.py[LINE:29] INFO Balancing minor class 
+FitModel.py[LINE:56] INFO No Search CV. Base model parameters used 
+FitModel.py[LINE:68] INFO Load Important Features from backup: 38 features 
+FitModel.py[LINE:75] INFO Trained model parameters:
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+              colsample_bynode=1, colsample_bytree=0.5, gamma=0,
+              learning_rate=0.1, max_delta_step=0, max_depth=3,
+              min_child_weight=3, missing=10000000000.0, n_estimators=100,
+              n_jobs=1, nthread=None, objective='binary:logistic',
+              random_state=0, reg_alpha=0, reg_lambda=0, scale_pos_weight=1,
+              seed=42, silent=None, subsample=1, verbosity=1) 
+EvaluateModel.py[LINE:9] INFO Evaluating model parameters 
+EvaluateModel.py[LINE:21] INFO Precision: 0.2945088676671214
+Recall: 0.41634522661523626
+F1: 0.3449860167798642
+Log Loss: 0.1341416895568461
+ROC AUC: 0.8976342013978357 
+FitModel.py[LINE:82] INFO Model successfully saved to output/model.sav 
+Run.py[LINE:64] INFO ____OPTION 3_____ Start Make predictions 
+PredictData.py[LINE:6] INFO Start prediction... 
+PredictData.py[LINE:12] INFO Prediction succesfully saved to output/YN_prediction.csv 
+
+2020-04-06 14:07:58,464 INFO #################### Session closed ####################
