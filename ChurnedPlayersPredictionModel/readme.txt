@@ -37,7 +37,6 @@ Program options:#
 # -- dataset_train.csv
 #
 #
-#
 ##################
 #### Option 2 ####
 ##################
@@ -62,8 +61,6 @@ Program options:#
 # -- model.sav
 # 
 #
-#
-#
 ##################
 #### Option 3 ####
 ##################
@@ -72,8 +69,6 @@ Program options:#
 # make and store predictions
 #
 # REQUIRES:
-#
-# Content:
 #
 # -- important_features.sav
 # -- model.sav
