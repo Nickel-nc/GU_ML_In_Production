@@ -38,10 +38,10 @@ while True:
                               raw_data_path=RAW_TEST_PATH,
                               dataset_path=DATASET_PATH,
                               mode='test')
-            prepare_dataset(data_filepath=TRAIN_DATA_FILEPATH,
+            prepare_dataset(data_filepath=RAW_TRAIN_DATA_FILPATH,
                             dataset_type='train',
                             dataset_path=DATASET_PATH)
-            prepare_dataset(data_filepath=TEST_DATA_FILEPATH,
+            prepare_dataset(data_filepath=RAW_TEST_DATA_FILPATH,
                             dataset_type='test',
                             dataset_path=DATASET_PATH)
         except FileNotFoundError as e:
